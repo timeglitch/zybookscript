@@ -5,27 +5,8 @@ Copy paste the following script into the f12 console (javascript console) and pr
 from https://www.reddit.com/r/userscripts/comments/vje7b2/does_anybody_know_a_user_script_that_actually/
 in the second comment
 
-//////////////////////////////////
+I've slightly modified the program to fix some bugs
 
-// This program is meant to be pasted into the console in the F12 menu of
-
-// any zybooks page. It will automate the following tasks:
-
-// - Multiple choice radio buttons
-
-// - 2x speed checkboxes
-
-// - Animation start buttons
-
-// - Animation play buttons
-
-// - Text entry activities (answers revealed, but not entered for you sadly)
-
-// - Matching activities (This is difficult and I haven't gotten it working)
-
-//
-
-//////////////////////////////////
 
 //////////////////////////////////
 
@@ -85,7 +66,8 @@ clickNextBox();
 
 //////////////////////////////////
 
-var startButtons = document.querySelectorAll('button[class="zb-button primary raised start-button start-graphic"]');
+var startButtons = document.querySelectorAll('button[class="zb-button  primary  raised           start-button start-graphic"]');
+console.log(startButtons.length)
 
 var index3 = 0;
 
@@ -115,7 +97,7 @@ function clickNextPlayButton() {
 
 setTimeout(clickNextPlayButton, 100);
 
-var playButtons = document.querySelectorAll('button[aria-label="Play"]');
+let playButtons = document.querySelectorAll('button[aria-label="Play"]');
 
 var index4 = 0;
 
@@ -129,7 +111,7 @@ setTimeout(clickNextPlayButton, 300); // adjust delay as needed
 
 }
 
-var pauseButtons = document.querySelectorAll('button[aria-label="Pause"]');
+let pauseButtons = document.querySelectorAll('button[aria-label="Pause"]');
 
 if (pauseButtons.length != 0) {
 
