@@ -135,7 +135,7 @@ function clickNextShowAnswerButton() {
 
 setTimeout(clickNextShowAnswerButton, 100);
 
-let showAnswerButtons = document.querySelectorAll('button[class="zb-button secondary show-answer-button"]');
+let showAnswerButtons = document.querySelectorAll('button[class="zb-button  secondary             show-answer-button"]');
 
 if (index5 < showAnswerButtons.length) {
 
